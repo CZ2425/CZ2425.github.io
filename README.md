@@ -22,8 +22,8 @@
     <h1>Links
     <h5>https://app.bookcreator.com/library/-OK32Lv_ud5CGvo4UBQn
     <h5>https://scratch.mit.edu/
-    <h1>Shoutouts
-    <h5>none
+    
+
         
 </body>
 </html>
