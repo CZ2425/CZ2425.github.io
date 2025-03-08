@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="backdrop"></div>
-    <h1>Explosive Corgis,I AM RIZZ and Logo</h1>
+    <h1>Explosive Corgis, I AM RIZZ and Logo</h1>
     <p>support us in book creator</p>
     <p>Enjoy the website!
     <h1>News
