@@ -9,6 +9,7 @@
     
 </head>
 <body>
+    <div class="backdrop"></div>
     <h1>Explosive Corgis</h1>
     <p>support us in book creator</p>
     <p>Enjoy the website!
