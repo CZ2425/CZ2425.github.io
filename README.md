@@ -14,7 +14,7 @@
     <p>support us in book creator</p>
     <p>Enjoy the website!
     <h1>News
-    <h5>Team tickets got double bingo in PE! My little brother is obsessed with tinkercad.This was easy to make! I learned HTML the day I made this.
+    <h5>Team tickets got double bingo in PE! My little brother is obsessed with tinkercad.This was easy to make! I learned HTML the day I made this. We are teaching about scratch. if this is outdated, let me know!
     <h1>Messages to staff
     <h5>To make website: 1. log in 2.create repositary 3. add code 4. test 5. customize 6. publish
     <h1>Gibberish
