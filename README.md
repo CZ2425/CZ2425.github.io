@@ -87,8 +87,34 @@ Unlock new levels or abilities as rewards for progress.
 
 </p>
 <h1>HTML stuff</h1>
-<p><img src="https://www.example.com/photo.jpg" alt="Photo">
-</p>
+<img src="https://www.example.com/photo.jpg" alt="Photo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    Sorry...
+</head>
+<body>
+
+    The links don't work. To use them, right-click them and select "open link". And for the photo, it just doesn't work.
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    URL
+</head>
+<body>
+
+    https://cz2425.github.io/
+
+</body>
+</html>
+
 <h2>This was made by Chuanliang Zhu
     
 
