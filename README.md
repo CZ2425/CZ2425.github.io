@@ -612,6 +612,700 @@ function gameLoop() {
 }
 
 gameLoop();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+// Game Variables
+const gravity = 0.5;
+const friction = 0.8;
+
+// Player Object
+const player = {
+    x: 50,
+    y: 300,
+    width: 30,
+    height: 50,
+    color: "red",
+    dx: 0,
+    dy: 0,
+    speed: 5,
+    jumpPower: -10,
+    grounded: false
+};
+
+// Platforms
+const platforms = [
+    { x: 0, y: 350, width: 800, height: 50 },
+    { x: 200, y: 280, width: 100, height: 10 },
+    { x: 400, y: 220, width: 100, height: 10 }
+];
+
+// Controls
+const keys = {};
+window.addEventListener("keydown", (e) => keys[e.code] = true);
+window.addEventListener("keyup", (e) => keys[e.code] = false);
+
+// Update Game Loop
+function update() {
+    // Movement
+    if (keys["ArrowRight"]) player.dx = player.speed;
+    else if (keys["ArrowLeft"]) player.dx = -player.speed;
+    else player.dx *= friction;
+
+    // Jump
+    if (keys["Space"] && player.grounded) {
+        player.dy = player.jumpPower;
+        player.grounded = false;
+    }
+
+    // Apply Gravity
+    player.dy += gravity;
+
+    // Update Position
+    player.x += player.dx;
+    player.y += player.dy;
+
+    // Collision with Platforms
+    player.grounded = false;
+    platforms.forEach(platform => {
+        if (
+            player.x < platform.x + platform.width &&
+            player.x + player.width > platform.x &&
+            player.y + player.height > platform.y &&
+            player.y + player.height - player.dy < platform.y
+        ) {
+            player.grounded = true;
+            player.dy = 0;
+            player.y = platform.y - player.height;
+        }
+    });
+
+    // Prevent Falling Through the Floor
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.dy = 0;
+        player.grounded = true;
+    }
+}
+
+// Draw Game Elements
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw Platforms
+    ctx.fillStyle = "green";
+    platforms.forEach(platform => {
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+}
+
+// Game Loop
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+// Game Variables
+const gravity = 0.5;
+const friction = 0.8;
+
+// Player Object
+const player = {
+    x: 50,
+    y: 300,
+    width: 30,
+    height: 50,
+    color: "red",
+    dx: 0,
+    dy: 0,
+    speed: 5,
+    jumpPower: -10,
+    grounded: false
+};
+
+// Platforms
+const platforms = [
+    { x: 0, y: 350, width: 800, height: 50 },
+    { x: 200, y: 280, width: 100, height: 10 },
+    { x: 400, y: 220, width: 100, height: 10 }
+];
+
+// Controls
+const keys = {};
+window.addEventListener("keydown", (e) => keys[e.code] = true);
+window.addEventListener("keyup", (e) => keys[e.code] = false);
+
+// Update Game Loop
+function update() {
+    // Movement
+    if (keys["ArrowRight"]) player.dx = player.speed;
+    else if (keys["ArrowLeft"]) player.dx = -player.speed;
+    else player.dx *= friction;
+
+    // Jump
+    if (keys["Space"] && player.grounded) {
+        player.dy = player.jumpPower;
+        player.grounded = false;
+    }
+
+    // Apply Gravity
+    player.dy += gravity;
+
+    // Update Position
+    player.x += player.dx;
+    player.y += player.dy;
+
+    // Collision with Platforms
+    player.grounded = false;
+    platforms.forEach(platform => {
+        if (
+            player.x < platform.x + platform.width &&
+            player.x + player.width > platform.x &&
+            player.y + player.height > platform.y &&
+            player.y + player.height - player.dy < platform.y
+        ) {
+            player.grounded = true;
+            player.dy = 0;
+            player.y = platform.y - player.height;
+        }
+    });
+
+    // Prevent Falling Through the Floor
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.dy = 0;
+        player.grounded = true;
+    }
+}
+
+// Draw Game Elements
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw Platforms
+    ctx.fillStyle = "green";
+    platforms.forEach(platform => {
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+}
+
+// Game Loop
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+// Game Variables
+const gravity = 0.5;
+const friction = 0.8;
+
+// Player Object
+const player = {
+    x: 50,
+    y: 300,
+    width: 30,
+    height: 50,
+    color: "red",
+    dx: 0,
+    dy: 0,
+    speed: 5,
+    jumpPower: -10,
+    grounded: false
+};
+
+// Platforms
+const platforms = [
+    { x: 0, y: 350, width: 800, height: 50 },
+    { x: 200, y: 280, width: 100, height: 10 },
+    { x: 400, y: 220, width: 100, height: 10 }
+];
+
+// Controls
+const keys = {};
+window.addEventListener("keydown", (e) => keys[e.code] = true);
+window.addEventListener("keyup", (e) => keys[e.code] = false);
+
+// Update Game Loop
+function update() {
+    // Movement
+    if (keys["ArrowRight"]) player.dx = player.speed;
+    else if (keys["ArrowLeft"]) player.dx = -player.speed;
+    else player.dx *= friction;
+
+    // Jump
+    if (keys["Space"] && player.grounded) {
+        player.dy = player.jumpPower;
+        player.grounded = false;
+    }
+
+    // Apply Gravity
+    player.dy += gravity;
+
+    // Update Position
+    player.x += player.dx;
+    player.y += player.dy;
+
+    // Collision with Platforms
+    player.grounded = false;
+    platforms.forEach(platform => {
+        if (
+            player.x < platform.x + platform.width &&
+            player.x + player.width > platform.x &&
+            player.y + player.height > platform.y &&
+            player.y + player.height - player.dy < platform.y
+        ) {
+            player.grounded = true;
+            player.dy = 0;
+            player.y = platform.y - player.height;
+        }
+    });
+
+    // Prevent Falling Through the Floor
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.dy = 0;
+        player.grounded = true;
+    }
+}
+
+// Draw Game Elements
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw Platforms
+    ctx.fillStyle = "green";
+    platforms.forEach(platform => {
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+}
+
+// Game Loop
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+// Game Variables
+const gravity = 0.5;
+const friction = 0.8;
+
+// Player Object
+const player = {
+    x: 50,
+    y: 300,
+    width: 30,
+    height: 50,
+    color: "red",
+    dx: 0,
+    dy: 0,
+    speed: 5,
+    jumpPower: -10,
+    grounded: false
+};
+
+// Platforms
+const platforms = [
+    { x: 0, y: 350, width: 800, height: 50 },
+    { x: 200, y: 280, width: 100, height: 10 },
+    { x: 400, y: 220, width: 100, height: 10 }
+];
+
+// Controls
+const keys = {};
+window.addEventListener("keydown", (e) => keys[e.code] = true);
+window.addEventListener("keyup", (e) => keys[e.code] = false);
+
+// Update Game Loop
+function update() {
+    // Movement
+    if (keys["ArrowRight"]) player.dx = player.speed;
+    else if (keys["ArrowLeft"]) player.dx = -player.speed;
+    else player.dx *= friction;
+
+    // Jump
+    if (keys["Space"] && player.grounded) {
+        player.dy = player.jumpPower;
+        player.grounded = false;
+    }
+
+    // Apply Gravity
+    player.dy += gravity;
+
+    // Update Position
+    player.x += player.dx;
+    player.y += player.dy;
+
+    // Collision with Platforms
+    player.grounded = false;
+    platforms.forEach(platform => {
+        if (
+            player.x < platform.x + platform.width &&
+            player.x + player.width > platform.x &&
+            player.y + player.height > platform.y &&
+            player.y + player.height - player.dy < platform.y
+        ) {
+            player.grounded = true;
+            player.dy = 0;
+            player.y = platform.y - player.height;
+        }
+    });
+
+    // Prevent Falling Through the Floor
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.dy = 0;
+        player.grounded = true;
+    }
+}
+
+// Draw Game Elements
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw Platforms
+    ctx.fillStyle = "green";
+    platforms.forEach(platform => {
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+}
+
+// Game Loop
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+// Game Variables
+const gravity = 0.5;
+const friction = 0.8;
+
+// Player Object
+const player = {
+    x: 50,
+    y: 300,
+    width: 30,
+    height: 50,
+    color: "red",
+    dx: 0,
+    dy: 0,
+    speed: 5,
+    jumpPower: -10,
+    grounded: false
+};
+
+// Platforms
+const platforms = [
+    { x: 0, y: 350, width: 800, height: 50 },
+    { x: 200, y: 280, width: 100, height: 10 },
+    { x: 400, y: 220, width: 100, height: 10 }
+];
+
+// Controls
+const keys = {};
+window.addEventListener("keydown", (e) => keys[e.code] = true);
+window.addEventListener("keyup", (e) => keys[e.code] = false);
+
+// Update Game Loop
+function update() {
+    // Movement
+    if (keys["ArrowRight"]) player.dx = player.speed;
+    else if (keys["ArrowLeft"]) player.dx = -player.speed;
+    else player.dx *= friction;
+
+    // Jump
+    if (keys["Space"] && player.grounded) {
+        player.dy = player.jumpPower;
+        player.grounded = false;
+    }
+
+    // Apply Gravity
+    player.dy += gravity;
+
+    // Update Position
+    player.x += player.dx;
+    player.y += player.dy;
+
+    // Collision with Platforms
+    player.grounded = false;
+    platforms.forEach(platform => {
+        if (
+            player.x < platform.x + platform.width &&
+            player.x + player.width > platform.x &&
+            player.y + player.height > platform.y &&
+            player.y + player.height - player.dy < platform.y
+        ) {
+            player.grounded = true;
+            player.dy = 0;
+            player.y = platform.y - player.height;
+        }
+    });
+
+    // Prevent Falling Through the Floor
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.dy = 0;
+        player.grounded = true;
+    }
+}
+
+// Draw Game Elements
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw Platforms
+    ctx.fillStyle = "green";
+    platforms.forEach(platform => {
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+}
+
+// Game Loop
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+// Game Variables
+const gravity = 0.5;
+const friction = 0.8;
+
+// Player Object
+const player = {
+    x: 50,
+    y: 300,
+    width: 30,
+    height: 50,
+    color: "red",
+    dx: 0,
+    dy: 0,
+    speed: 5,
+    jumpPower: -10,
+    grounded: false
+};
+
+// Platforms
+const platforms = [
+    { x: 0, y: 350, width: 800, height: 50 },
+    { x: 200, y: 280, width: 100, height: 10 },
+    { x: 400, y: 220, width: 100, height: 10 }
+];
+
+// Controls
+const keys = {};
+window.addEventListener("keydown", (e) => keys[e.code] = true);
+window.addEventListener("keyup", (e) => keys[e.code] = false);
+
+// Update Game Loop
+function update() {
+    // Movement
+    if (keys["ArrowRight"]) player.dx = player.speed;
+    else if (keys["ArrowLeft"]) player.dx = -player.speed;
+    else player.dx *= friction;
+
+    // Jump
+    if (keys["Space"] && player.grounded) {
+        player.dy = player.jumpPower;
+        player.grounded = false;
+    }
+
+    // Apply Gravity
+    player.dy += gravity;
+
+    // Update Position
+    player.x += player.dx;
+    player.y += player.dy;
+
+    // Collision with Platforms
+    player.grounded = false;
+    platforms.forEach(platform => {
+        if (
+            player.x < platform.x + platform.width &&
+            player.x + player.width > platform.x &&
+            player.y + player.height > platform.y &&
+            player.y + player.height - player.dy < platform.y
+        ) {
+            player.grounded = true;
+            player.dy = 0;
+            player.y = platform.y - player.height;
+        }
+    });
+
+    // Prevent Falling Through the Floor
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.dy = 0;
+        player.grounded = true;
+    }
+}
+
+// Draw Game Elements
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw Platforms
+    ctx.fillStyle = "green";
+    platforms.forEach(platform => {
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+}
+
+// Game Loop
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+// Game Variables
+const gravity = 0.5;
+const friction = 0.8;
+
+// Player Object
+const player = {
+    x: 50,
+    y: 300,
+    width: 30,
+    height: 50,
+    color: "red",
+    dx: 0,
+    dy: 0,
+    speed: 5,
+    jumpPower: -10,
+    grounded: false
+};
+
+// Platforms
+const platforms = [
+    { x: 0, y: 350, width: 800, height: 50 },
+    { x: 200, y: 280, width: 100, height: 10 },
+    { x: 400, y: 220, width: 100, height: 10 }
+];
+
+// Controls
+const keys = {};
+window.addEventListener("keydown", (e) => keys[e.code] = true);
+window.addEventListener("keyup", (e) => keys[e.code] = false);
+
+// Update Game Loop
+function update() {
+    // Movement
+    if (keys["ArrowRight"]) player.dx = player.speed;
+    else if (keys["ArrowLeft"]) player.dx = -player.speed;
+    else player.dx *= friction;
+
+    // Jump
+    if (keys["Space"] && player.grounded) {
+        player.dy = player.jumpPower;
+        player.grounded = false;
+    }
+
+    // Apply Gravity
+    player.dy += gravity;
+
+    // Update Position
+    player.x += player.dx;
+    player.y += player.dy;
+
+    // Collision with Platforms
+    player.grounded = false;
+    platforms.forEach(platform => {
+        if (
+            player.x < platform.x + platform.width &&
+            player.x + player.width > platform.x &&
+            player.y + player.height > platform.y &&
+            player.y + player.height - player.dy < platform.y
+        ) {
+            player.grounded = true;
+            player.dy = 0;
+            player.y = platform.y - player.height;
+        }
+    });
+
+    // Prevent Falling Through the Floor
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.dy = 0;
+        player.grounded = true;
+    }
+}
+
+// Draw Game Elements
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw Platforms
+    ctx.fillStyle = "green";
+    platforms.forEach(platform => {
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+}
+
+// Game Loop
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+
 
 
 
