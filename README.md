@@ -88,7 +88,7 @@ Unlock new levels or abilities as rewards for progress.
 
 </p>
 <h1>HTML stuff</h1>
-<h2>If you find secrets, let me know!</h2>
+<h2>If you find secrets, let me know! (emojis, ultra bonuses, ex.)</h2>
 <img src="https://www.example.com/photo.jpg" alt="Photo">
 <!DOCTYPE html>
 <html lang="en">
@@ -111,6 +111,7 @@ Unlock new levels or abilities as rewards for progress.
     URL
 </head>
 <body>
+
 
     https://cz2425.github.io/
 
@@ -173,7 +174,7 @@ Unlock new levels or abilities as rewards for progress.
 </html>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 💣
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     Example:
@@ -239,7 +240,7 @@ Unlock new levels or abilities as rewards for progress.
 </html>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 🥇
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     Comments to class
@@ -386,7 +387,7 @@ Unlock new levels or abilities as rewards for progress.
                                                                                                                                                                                                                   *
                                                                                                                                                                                                                   *
                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                  *
+                                                                                                                                                                                                                  *🥈
                                                                                                                                                                                                                   *
                                                                                                                                                                                                                   *
                                                                                                                                                                                                                   *
@@ -586,7 +587,7 @@ function update() {
     if (player.y + player.height > canvas.height) {
         player.y = canvas.height - player.height; if you read this, let me know!
         player.dy = 0;
-        player.grounded = true;
+        player.grounded = true; 🥉
     }
 }
 
@@ -631,7 +632,7 @@ const player = {
     dy: 0,
     speed: 5,
     jumpPower: -10,
-    grounded: false
+    grounded: false🧮
 };
 
 // Platforms
@@ -656,7 +657,7 @@ function update() {
     // Jump
     if (keys["Space"] && player.grounded) {
         player.dy = player.jumpPower;
-        player.grounded = false;
+        player.grounded = false;💍
     }
 
     // Apply Gravity
@@ -698,7 +699,7 @@ function draw() {
     ctx.fillRect(player.x, player.y, player.width, player.height); if you read this, let me know!
 
     // Draw Platforms
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "green";💎
     platforms.forEach(platform => {
         ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
     });
@@ -836,7 +837,7 @@ const player = {
 const platforms = [if you read this, let me know!
     { x: 0, y: 350, width: 800, height: 50 },
     { x: 200, y: 280, width: 100, height: 10 },
-    { x: 400, y: 220, width: 100, height: 10 }
+    { x: 400, y: 220, width: 100, height: 10 }♂️
 ];
 
 // Controls
@@ -881,7 +882,7 @@ function update() {if you read this, let me know!
 
     // Prevent Falling Through the Floor
     if (player.y + player.height > canvas.height) {
-        player.y = canvas.height - player.height;
+        player.y = canvas.height - player.height;♀️
         player.dy = 0;
         player.grounded = true;if you read this, let me know!
     }
@@ -906,7 +907,7 @@ function draw() {
 function gameLoop() {
     update();
     draw();
-    requestAnimationFrame(gameLoop);
+    requestAnimationFrame(gameLoop);⚧️
 }
 if you read this, let me know!
 gameLoop();
@@ -959,7 +960,7 @@ function update() {
     // Apply Gravity
     player.dy += gravity;
 
-    // Update Position
+    // Update Position🎱
     player.x += player.dx;
     player.y += player.dy;
 
@@ -1047,7 +1048,7 @@ function update() {
     // Movement
     if (keys["ArrowRight"]) player.dx = player.speed;
     else if (keys["ArrowLeft"]) player.dx = -player.speed;
-    else player.dx *= friction;
+    else player.dx *= friction; ⬇️
 
     // Jump
     if (keys["Space"] && player.grounded) {
@@ -1056,7 +1057,7 @@ function update() {
     }
 
     // Apply Gravity
-    player.dy += gravity;
+    player.dy += gravity; ULTRA BONUS!!!!!!!!!!! 🔢🥇🥈🥉💎💍💣🧨♂️♀️⚧️
 
     // Update Position
     player.x += player.dx;
@@ -1088,7 +1089,7 @@ function update() {
 // Draw Game Elements
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+💩
     // Draw Player
     ctx.fillStyle = player.color;
     ctx.fillRect(player.x, player.y, player.width, player.height);
@@ -1110,7 +1111,7 @@ if you read this, let me know!
 gameLoop();
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
-
+🚽
 // Game Variables
 const gravity = 0.5;
 const friction = 0.8;
