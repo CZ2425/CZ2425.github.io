@@ -91,19 +91,19 @@ Unlock new levels or abilities as rewards for progress.
 
 
 <h1>Secret!</h1>
-1.research the Ook! programing language    
-2.What will this print?:Ook. Ook? Ook! Ook. Ook? Ook. Ook? Ook? Ook! Ook. Ook! Ook? Ook. Ook? Ook? Ook. Ook. Ook? Ook. Ook!    
-Variation with chef coding:Recipe for YouAreAGenius:
+1.research the Ook! programing language   ___ 
+2.What will this print?:Ook. Ook? Ook! Ook. Ook? Ook. Ook? Ook? Ook! Ook. Ook! Ook? Ook. Ook? Ook? Ook. Ook. Ook? Ook. Ook!  ___  
+Variation with chef coding:Recipe for YouAreAGenius:    ___
 
 Ingredients.
-  You are a genius! is a string of 16 characters.
+  You are a genius! is a string of 16 characters.    
 
 Method.
   Put You into the oven.
   Serve.
     Variation with LOLcode:HAI 1.2
   VISIBLE "You are a genius!"
-KTHXBYE
+KTHXBYE    ___
     Variation with INTERCAL:DO ,1 <- #255
 DO ,1 SUB #1 <- #74
 DO ,1 SUB #2 <- #111
