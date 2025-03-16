@@ -88,6 +88,13 @@ Unlock new levels or abilities as rewards for progress.
 
 
 </p>
+
+
+<h1>Secret!</h1>
+1.research the Ook! programing language
+2.What will this print?:Ook. Ook? Ook! Ook. Ook? Ook. Ook? Ook? Ook! Ook. Ook! Ook? Ook. Ook? Ook? Ook. Ook. Ook? Ook. Ook!
+
+    
 <h1>HTML stuff</h1>
 <h2>If you find secrets, let me know! (emojis, ultra bonuses, ex.)</h2>
 <img src="https://www.example.com/photo.jpg" alt="Photo">
