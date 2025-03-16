@@ -11,6 +11,7 @@
 <body>
     <div class="backdrop"></div>
     <h1>Explosive Corgis, I AM RIZZ and Logo</h1>
+    <h2>This was made by Chuanliang Zhu</h2>
     <p>support us in book creator</p>
     <p>Enjoy the website!
     <h1>News
