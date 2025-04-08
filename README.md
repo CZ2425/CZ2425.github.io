@@ -28,6 +28,7 @@
     <h5>https://cz2425.github.io/CZnews/
     <h5>https://cz2425.github.io/tickets/
     <h5>https://cz2425.github.io/CZ_IS_BV/
+    <h5>https://ishaansuryavanshi.github.io/#
     <h1>Benifits of gaming</h1>
     <p>Playing video games offers a variety of benefits, including cognitive, social, and emotional advantages. Here are some of the key benefits:
 
