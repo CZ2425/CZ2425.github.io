@@ -13,7 +13,8 @@
     <h1>Explosive Corgis, I AM RIZZ and Logo</h1>
     <h2>This was made by Chuanliang Zhu</h2>
     <p>support us in book creator</p>
-    <p>Enjoy the website!
+    <p>Enjoy the website! 
+    <p>© 2025 Chuanliang Zhu</p>
     <h1>News
     <h5>Team tickets got double bingo in PE! My little brother is obsessed with tinkercad.This was easy to make! I learned HTML the day I made this. We are teaching about scratch. if this is outdated, let me know!
     <h1>Messages to staff
@@ -1877,11 +1878,6 @@ PHP (Hypertext Preprocessor) is a server-side scripting language used to create 
 
 
 <h2>This was made by Chuanliang Zhu
-
-
-
-
-<p>© 2025 Chuanliang Zhu</p>
     
 
         
