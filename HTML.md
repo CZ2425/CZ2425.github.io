@@ -16,7 +16,7 @@
     <p>support us in book creator</p>
     <p>Enjoy the website! 
     <p>© 2025 Chuanliang Zhu</p>
-    <img src="Hydrbibcaud.png" alt="Description of image" width="20000" height="600">
+    <img src="3D Town.png" alt="3D town" width="20000" height="600">
 Key Attributes:
     <h1>News
     <h5>Team tickets got double bingo in PE! My little brother is obsessed with tinkercad.This was easy to make! I learned HTML the day I made this. We are teaching about scratch. if this is outdated, let me know!
