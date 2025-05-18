@@ -6,7 +6,7 @@ Look for secrets and soak up the information!
 Who made this website:
 CZ2425
 
-When this was created
+When this was created:
 March 8, 2015, 1:51 P.M.
 
 
