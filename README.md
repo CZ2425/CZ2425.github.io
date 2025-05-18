@@ -1,4 +1,4 @@
-Welcome to the CZ2425.github.io wiki!
+Welcome to CZ2425.github.io!
 
 How to use this website:
 Look for secrets and soak up the information!
